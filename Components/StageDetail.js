@@ -134,7 +134,7 @@ class StageDetail extends React.Component{
 
   _displayFloatingActionButton(){
     const { stage } = this.state
-    if(stage!==undefined && Platform.OS === "android"){
+    if(stage!==undefined ){ 
       return (
         <TouchableOpacity
           style={styles.share_touchable_floatingactionbutton}

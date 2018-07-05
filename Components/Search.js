@@ -13,6 +13,7 @@ import { Button,
  import StageList from './StageList'
  import { getStageFromApiSearchedText } from '../API/AikidoApi'
  import { connect } from 'react-redux'
+ import accents from 'remove-accents'
 
 class Search extends React.Component{
 
@@ -79,6 +80,7 @@ class Search extends React.Component{
 
   _searchTextInputChanged(text){
     let texte
+    text= accents.remove(text)
     texte=text.charAt(0).toUpperCase() + text.slice(1)
     this.searchedText = texte
   }
