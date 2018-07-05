@@ -60,16 +60,27 @@ const FavoritesStackNavigator = createStackNavigator({
       headerStyle: {
         backgroundColor: '#62150E',
         borderColor: 'black',
-        borderWidth: 1
+        borderWidth: 1,
       },
       headerTitleStyle: {
         color: '#fff',
-        marginLeft: 100
       }
     })
   },
   StageDetail: {
-    screen: StageDetail
+    screen: StageDetail,
+    navigationOptions: () => ({
+      title: 'Détail des favoris',
+      headerStyle: {
+        backgroundColor: '#62150E',
+        borderColor: 'black',
+        borderWidth: 1
+      },
+      headerTitleStyle: {
+        color: '#fff',
+      }
+    })
+
   }
 })
 

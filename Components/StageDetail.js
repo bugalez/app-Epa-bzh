@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
   Image,
   Share,
-  Alert
+  Alert,
 } from 'react-native'
 import { getStageFromApiwithId } from '../API/AikidoApi'
 import { connect } from 'react-redux'
@@ -100,7 +100,11 @@ class StageDetail extends React.Component{
             <Text style={styles.text_prof}> Professeur : {stage.professeurs}</Text>
             <Text style={styles.text_tel}>Tél : {stage.tel}</Text>
             <Text style={styles.text_mail}>Email : {stage.mail}</Text>
-            <Text style={styles.text_site}>Site web : {stage.site}</Text>
+            <TouchableOpacity
+              style={styles.linking}
+              onPress={console.log(stage.site)} >
+              <Text style={styles.text_site}>Site web : {stage.site}</Text>
+            </TouchableOpacity>
           </View>
 
         </ScrollView>
