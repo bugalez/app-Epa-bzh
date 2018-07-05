@@ -10,7 +10,6 @@ import {
   Button,
   TouchableOpacity,
   Image,
-  Platform,
   Share,
   Alert
 } from 'react-native'
@@ -111,7 +110,7 @@ class StageDetail extends React.Component{
 
   _shareStage() {
     const { stage } = this.state
-    Share.share({ title: stage.lieux, message: "je participerais au stage " + stage.lieux + " le " + stage.dates})
+    Share.share({ title: stage.lieux, message: stage.lieux })
       .then(
         Alert.alert(
           'Succès',
@@ -134,14 +133,14 @@ class StageDetail extends React.Component{
 
   _displayFloatingActionButton(){
     const { stage } = this.state
-    if(stage!==undefined ){ 
+    if(stage!==undefined ){
       return (
         <TouchableOpacity
           style={styles.share_touchable_floatingactionbutton}
           onPress={()=>this._shareStage()}>
             <Image
               style={styles.share_image}
-              source={require('../Images/ic_share.png')} />
+              source={require('../Images/ic_share.android.png')} />
           </TouchableOpacity>
       )
     }
@@ -248,7 +247,6 @@ const styles = StyleSheet.create({
     right: 30,
     bottom: 10,
     borderRadius: 30,
-    //backgroundColor: '#e91e63',
     backgroundColor: 'rgba(233, 30, 99, 0.4)',
     justifyContent: 'center',
     alignItems: 'center'

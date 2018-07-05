@@ -1,5 +1,15 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+   "name": "EPA-Bzh",
+   "icon": "./Images/Hotou.png",
+   "version": "1.0.0",
+   "slug": "EPA-Bzh",
+   "sdkVersion": "27.0.0",
+   "ios": {
+     "bundleIdentifier": "tk.bugalez.epabzh"
+   },
+   "android": {
+     "package": "tk.bugalez.epabzh"
+   }
   }
 }
